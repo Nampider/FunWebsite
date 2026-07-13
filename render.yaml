@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: kinline-backend
+    runtime: docker
+    plan: free
+    numInstances: 1
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /actuator/health
+    maxShutdownDelaySeconds: 30
+    autoDeployTrigger: commit
+    envVars:
+      - key: CHAT_CHRIS_PASSWORD
+        sync: false
+      - key: CHAT_AUDREY_PASSWORD
+        sync: false
+      - key: CHAT_FRONTEND_ORIGIN
+        sync: false
+      - key: SESSION_COOKIE_SECURE
+        value: "true"
+      - key: SESSION_COOKIE_SAME_SITE
+        value: none
+      - key: FORWARD_HEADERS_STRATEGY
+        value: framework
+      - key: CHAT_DEBUG_ENDPOINTS_ENABLED
+        value: "false"
