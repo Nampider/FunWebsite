@@ -6,7 +6,6 @@ services:
     numInstances: 1
     dockerfilePath: ./Dockerfile
     healthCheckPath: /actuator/health
-    maxShutdownDelaySeconds: 30
     autoDeployTrigger: commit
     envVars:
       - key: CHAT_CHRIS_PASSWORD
