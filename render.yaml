@@ -13,7 +13,7 @@ services:
       - key: CHAT_AUDREY_PASSWORD
         sync: false
       - key: CHAT_FRONTEND_ORIGIN
-        sync: false
+        value: https://kinline-frontend-d19e.onrender.com/
       - key: SESSION_COOKIE_SECURE
         value: "true"
       - key: SESSION_COOKIE_SAME_SITE
