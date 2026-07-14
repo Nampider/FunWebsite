@@ -12,6 +12,8 @@ services:
         sync: false
       - key: CHAT_AUDREY_PASSWORD
         sync: false
+      - key: CHAT_PARKER_PASSWORD
+        sync: false
       - key: CHAT_FRONTEND_ORIGIN
         value: https://kinline-frontend-d19e.onrender.com/
       - key: SESSION_COOKIE_SECURE
